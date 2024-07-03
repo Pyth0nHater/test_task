@@ -1,22 +1,10 @@
 {
-  "name": "test_task",
+  "name": "project-root",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "ts-node src/index.ts"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "@types/express": "^4.17.21",
-    "@types/node": "^20.14.9",
-    "ant-design-vue": "^4.2.3",
-    "axios": "^1.7.2",
-    "express": "^4.19.2",
-    "ts-node": "^10.9.2",
-    "typescript": "^5.5.3"
+    "start": "npm run --prefix server start",
+    "client": "npm run --prefix client dev",
+    "build": "npm run --prefix client build"
   }
 }

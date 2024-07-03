@@ -10,7 +10,8 @@ router.get('/api/leads', async (req: Request, res: Response) => {
     const leads = await amoCRMService.getLeads(query);
     res.json(leads);
   } catch (error) {
-    res.status(500).json({ error: error.message });
+    const err = error as Error; 
+    res.status(500).json({ error: err.message });
   }
 });
 
