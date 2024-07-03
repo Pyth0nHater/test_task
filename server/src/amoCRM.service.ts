@@ -6,9 +6,9 @@ export class AmoCRMService {
 
   async getLeads(query?: string): Promise<any> {
     const params = query ? { query } : {};
-    const leadsResponse = await axios.get(`${this.baseUrl}/api/v4/leads`, {
+    const leadsResponse = await axios.get(`${process.env.AMOCRM_BASE_URL}/api/v4/leads`, {
       headers: {
-        Authorization: `Bearer ${this.accessToken}`,
+        Authorization: `Bearer ${process.env.AMOCRM_ACCESS_TOKEN}`,
       },
       params,
     });
